@@ -1,0 +1,974 @@
+{
+  "3d-printers": {
+    "id": 945,
+    "name": "3D-printers"
+  },
+  "aanvullende-componenten": {
+    "id": 837,
+    "name": "Aanvullende componenten"
+  },
+  "accesspoints": {
+    "id": 314,
+    "name": "Accesspoints"
+  },
+  "actioncams": {
+    "id": 947,
+    "name": "Actioncams"
+  },
+  "afstandsbedieningen": {
+    "id": 565,
+    "name": "Afstandsbedieningen"
+  },
+  "afzuigkappen": {
+    "id": 1060,
+    "name": "Afzuigkappen"
+  },
+  "aircos": {
+    "id": 1092,
+    "name": "Airco's"
+  },
+  "airfryers": {
+    "id": 1030,
+    "name": "Airfryers"
+  },
+  "alarmsystemen": {
+    "id": 942,
+    "name": "Alarmsystemen"
+  },
+  "audiosets": {
+    "id": 654,
+    "name": "Audiosets"
+  },
+  "autoradios": {
+    "id": 680,
+    "name": "Autoradio's"
+  },
+  "av-accessoires": {
+    "id": 657,
+    "name": "Av-accessoires"
+  },
+  "babyfoons": {
+    "id": 1068,
+    "name": "Babyfoons"
+  },
+  "backup-drives-en-removable-storage": {
+    "id": 65,
+    "name": "Backup drives en removable storage"
+  },
+  "barbecues": {
+    "id": 1168,
+    "name": "Barbecues"
+  },
+  "barebones": {
+    "id": 326,
+    "name": "Barebones"
+  },
+  "basiscomponenten": {
+    "id": 14,
+    "name": "Basiscomponenten"
+  },
+  "basisstations": {
+    "id": 934,
+    "name": "Basisstations"
+  },
+  "beamers": {
+    "id": 216,
+    "name": "Beamers"
+  },
+  "bediening": {
+    "id": 937,
+    "name": "Bediening"
+  },
+  "behuizingen": {
+    "id": 61,
+    "name": "Behuizingen"
+  },
+  "benchmarks": {
+    "id": 238,
+    "name": "Benchmarks"
+  },
+  "besturingssystemen": {
+    "id": 404,
+    "name": "Besturingssystemen"
+  },
+  "beugels-en-standaarden": {
+    "id": 803,
+    "name": "Beugels en standaarden"
+  },
+  "beveiliging-en-antivirus": {
+    "id": 409,
+    "name": "Beveiliging en antivirus"
+  },
+  "bewakingscameras": {
+    "id": 943,
+    "name": "Bewakingscamera's"
+  },
+  "bladblazers": {
+    "id": 1034,
+    "name": "Bladblazers"
+  },
+  "blenders": {
+    "id": 824,
+    "name": "Blenders"
+  },
+  "bloeddrukmeters": {
+    "id": 1058,
+    "name": "Bloeddrukmeters"
+  },
+  "blu-ray-dvd-en-cd": {
+    "id": 781,
+    "name": "Blu-ray, dvd en cd"
+  },
+  "boormachines": {
+    "id": 971,
+    "name": "Boormachines"
+  },
+  "broodbakmachines": {
+    "id": 1070,
+    "name": "Broodbakmachines"
+  },
+  "broodroosters": {
+    "id": 1048,
+    "name": "Broodroosters"
+  },
+  "browsers": {
+    "id": 840,
+    "name": "Browsers"
+  },
+  "business-software": {
+    "id": 718,
+    "name": "Business software"
+  },
+  "camera-accessoires": {
+    "id": 290,
+    "name": "Camera-accessoires"
+  },
+  "cameralenzen": {
+    "id": 925,
+    "name": "Cameralenzen"
+  },
+  "cameratassen": {
+    "id": 953,
+    "name": "Cameratassen"
+  },
+  "capturecards": {
+    "id": 66,
+    "name": "Capturecards"
+  },
+  "case-fans": {
+    "id": 492,
+    "name": "Case fans"
+  },
+  "casemodding": {
+    "id": 483,
+    "name": "Casemodding"
+  },
+  "cirkelzagen": {
+    "id": 973,
+    "name": "Cirkelzagen"
+  },
+  "citruspersen": {
+    "id": 1078,
+    "name": "Citruspersen"
+  },
+  "compactcameras": {
+    "id": 436,
+    "name": "Compactcamera's"
+  },
+  "computer-accessoires": {
+    "id": 455,
+    "name": "Computer-accessoires"
+  },
+  "consoles": {
+    "id": 539,
+    "name": "Consoles"
+  },
+  "dashcams": {
+    "id": 998,
+    "name": "Dashcams"
+  },
+  "database-management": {
+    "id": 720,
+    "name": "Database management"
+  },
+  "dataprocessing-en-transmission": {
+    "id": 721,
+    "name": "Dataprocessing en transmission"
+  },
+  "decoders": {
+    "id": 651,
+    "name": "Decoders"
+  },
+  "decoupeerzagen": {
+    "id": 995,
+    "name": "Decoupeerzagen"
+  },
+  "design-en-graphics": {
+    "id": 719,
+    "name": "Design en graphics"
+  },
+  "design-en-multimedia": {
+    "id": 406,
+    "name": "Design en multimedia"
+  },
+  "desktop-applications": {
+    "id": 722,
+    "name": "Desktop applications"
+  },
+  "desktop-publishing": {
+    "id": 723,
+    "name": "Desktop publishing"
+  },
+  "deurbellen": {
+    "id": 1022,
+    "name": "Deurbellen"
+  },
+  "deursloten": {
+    "id": 1024,
+    "name": "Deursloten"
+  },
+  "development-tools": {
+    "id": 848,
+    "name": "Development tools"
+  },
+  "digitale-fotolijsten": {
+    "id": 708,
+    "name": "Digitale fotolijsten"
+  },
+  "dockingstations": {
+    "id": 495,
+    "name": "Dockingstations"
+  },
+  "drone-accessoires": {
+    "id": 961,
+    "name": "Drone-accessoires"
+  },
+  "drones": {
+    "id": 959,
+    "name": "Drones"
+  },
+  "e-readers": {
+    "id": 804,
+    "name": "E-readers"
+  },
+  "elektrisch-gereedschap-accessoires": {
+    "id": 1000,
+    "name": "Elektrisch gereedschap accessoires"
+  },
+  "elektrische-dekens": {
+    "id": 1098,
+    "name": "Elektrische dekens"
+  },
+  "elektrische-grasmaaiers": {
+    "id": 983,
+    "name": "Elektrische grasmaaiers"
+  },
+  "elektrische-heggenscharen": {
+    "id": 981,
+    "name": "Elektrische heggenscharen"
+  },
+  "elektrische-kachels": {
+    "id": 1074,
+    "name": "Elektrische kachels"
+  },
+  "externe-harde-schijven": {
+    "id": 334,
+    "name": "Externe harde schijven"
+  },
+  "externe-ssds": {
+    "id": 948,
+    "name": "Externe ssd's"
+  },
+  "fan-controllers-en-lcds": {
+    "id": 490,
+    "name": "Fan-controllers en lcd's"
+  },
+  "filters": {
+    "id": 677,
+    "name": "Filters"
+  },
+  "flitsers": {
+    "id": 610,
+    "name": "Flitsers"
+  },
+  "gadgets": {
+    "id": 798,
+    "name": "Gadgets"
+  },
+  "game-accessoires": {
+    "id": 542,
+    "name": "Game-accessoires"
+  },
+  "gamecontrollers": {
+    "id": 541,
+    "name": "Gamecontrollers"
+  },
+  "games": {
+    "id": 638,
+    "name": "Games"
+  },
+  "games-en-strategy-guides": {
+    "id": 724,
+    "name": "Games en strategy guides"
+  },
+  "gaming-headsets": {
+    "id": 563,
+    "name": "Gaming headsets"
+  },
+  "garantie-en-servicepacks": {
+    "id": 762,
+    "name": "Garantie en servicepacks"
+  },
+  "geheugen-intern": {
+    "id": 545,
+    "name": "Geheugen intern"
+  },
+  "geheugenkaarten": {
+    "id": 48,
+    "name": "Geheugenkaarten"
+  },
+  "geheugenkaartlezers": {
+    "id": 681,
+    "name": "Geheugenkaartlezers"
+  },
+  "geluidskaarten": {
+    "id": 53,
+    "name": "Geluidskaarten"
+  },
+  "gourmetstellen": {
+    "id": 1084,
+    "name": "Gourmetstellen"
+  },
+  "haakse-slijpers": {
+    "id": 985,
+    "name": "Haakse slijpers"
+  },
+  "hardware-boeken": {
+    "id": 725,
+    "name": "Hardware boeken"
+  },
+  "hardware-modding": {
+    "id": 828,
+    "name": "Hardware modding"
+  },
+  "hdd-ssd-behuizingen": {
+    "id": 949,
+    "name": "Hdd/ssd behuizingen"
+  },
+  "hogedrukreinigers": {
+    "id": 979,
+    "name": "Hogedrukreinigers"
+  },
+  "hoofdtelefoons": {
+    "id": 1020,
+    "name": "Hoofdtelefoons"
+  },
+  "huishouden": {
+    "id": 916,
+    "name": "Huishouden"
+  },
+  "ict-boeken": {
+    "id": 691,
+    "name": "Ict-boeken"
+  },
+  "information": {
+    "id": 726,
+    "name": "Information"
+  },
+  "instant-cameras": {
+    "id": 1038,
+    "name": "Instant camera's"
+  },
+  "interactive-en-multimedia": {
+    "id": 728,
+    "name": "Interactive en multimedia"
+  },
+  "interfaces": {
+    "id": 938,
+    "name": "Interfaces"
+  },
+  "interne-harde-schijven": {
+    "id": 50,
+    "name": "Interne harde schijven"
+  },
+  "interne-ssds": {
+    "id": 674,
+    "name": "Interne ssd's"
+  },
+  "internet-boeken": {
+    "id": 727,
+    "name": "Internet boeken"
+  },
+  "kabels": {
+    "id": 72,
+    "name": "Kabels"
+  },
+  "keukenapparatuur": {
+    "id": 915,
+    "name": "Keukenapparatuur"
+  },
+  "keukenmachines": {
+    "id": 908,
+    "name": "Keukenmachines"
+  },
+  "klimaatbeheersing": {
+    "id": 1094,
+    "name": "Klimaatbeheersing"
+  },
+  "koelkasten": {
+    "id": 903,
+    "name": "Koelkasten"
+  },
+  "koffiezetapparaten": {
+    "id": 817,
+    "name": "Koffiezetapparaten"
+  },
+  "kvm-switches": {
+    "id": 567,
+    "name": "Kvm-switches"
+  },
+  "laptops": {
+    "id": 496,
+    "name": "Laptops"
+  },
+  "laptoptassen": {
+    "id": 672,
+    "name": "Laptoptassen"
+  },
+  "luchtbevochtigers": {
+    "id": 1036,
+    "name": "Luchtbevochtigers"
+  },
+  "luchtontvochtigers": {
+    "id": 1028,
+    "name": "Luchtontvochtigers"
+  },
+  "luchtreinigers": {
+    "id": 1032,
+    "name": "Luchtreinigers"
+  },
+  "magnetrons": {
+    "id": 901,
+    "name": "Magnetrons"
+  },
+  "massageapparaten": {
+    "id": 1062,
+    "name": "Massageapparaten"
+  },
+  "mediaspelers": {
+    "id": 655,
+    "name": "Mediaspelers"
+  },
+  "melkopschuimers": {
+    "id": 1040,
+    "name": "Melkopschuimers"
+  },
+  "memorecorders": {
+    "id": 763,
+    "name": "Memorecorders"
+  },
+  "microfoons": {
+    "id": 1002,
+    "name": "Microfoons"
+  },
+  "mobiele-abonnementen": {
+    "id": 760,
+    "name": "Mobiele abonnementen"
+  },
+  "mobiele-besturingssystemen": {
+    "id": 869,
+    "name": "Mobiele besturingssystemen"
+  },
+  "modems-en-routers": {
+    "id": 560,
+    "name": "Modems en routers"
+  },
+  "moederborden": {
+    "id": 47,
+    "name": "Moederborden"
+  },
+  "monitors": {
+    "id": 344,
+    "name": "Monitors"
+  },
+  "mp3-accessoires": {
+    "id": 608,
+    "name": "Mp3-accessoires"
+  },
+  "mp3-spelers": {
+    "id": 605,
+    "name": "Mp3-spelers"
+  },
+  "muismatten": {
+    "id": 534,
+    "name": "Muismatten"
+  },
+  "muizen": {
+    "id": 531,
+    "name": "Muizen"
+  },
+  "multitools": {
+    "id": 977,
+    "name": "Multitools"
+  },
+  "nas": {
+    "id": 685,
+    "name": "Nas"
+  },
+  "navigatie": {
+    "id": 478,
+    "name": "Navigatie"
+  },
+  "netwerk": {
+    "id": 838,
+    "name": "Netwerk"
+  },
+  "netwerk-en-systeembeheer": {
+    "id": 825,
+    "name": "Netwerk en systeembeheer"
+  },
+  "netwerk-switches": {
+    "id": 311,
+    "name": "Netwerk switches"
+  },
+  "netwerkaccessoires": {
+    "id": 561,
+    "name": "Netwerkaccessoires"
+  },
+  "netwerkadapters": {
+    "id": 310,
+    "name": "Netwerkadapters"
+  },
+  "netwerkkabels": {
+    "id": 1026,
+    "name": "Netwerkkabels"
+  },
+  "networking-en-security": {
+    "id": 729,
+    "name": "Networking en security"
+  },
+  "officesoftware-en-suites": {
+    "id": 405,
+    "name": "Officesoftware en suites"
+  },
+  "oordopjes": {
+    "id": 453,
+    "name": "Oordopjes"
+  },
+  "operating-systems": {
+    "id": 730,
+    "name": "Operating systems"
+  },
+  "opladers": {
+    "id": 1010,
+    "name": "Opladers"
+  },
+  "opslag": {
+    "id": 839,
+    "name": "Opslag"
+  },
+  "optische-drives": {
+    "id": 634,
+    "name": "Optische drives"
+  },
+  "ovens": {
+    "id": 1072,
+    "name": "Ovens"
+  },
+  "overclocking": {
+    "id": 843,
+    "name": "Overclocking"
+  },
+  "overige-audio": {
+    "id": 887,
+    "name": "Overige audio"
+  },
+  "overige-av-accessoires": {
+    "id": 879,
+    "name": "Overige av-accessoires"
+  },
+  "overige-boeken": {
+    "id": 733,
+    "name": "Overige boeken"
+  },
+  "overige-componenten": {
+    "id": 881,
+    "name": "Overige componenten"
+  },
+  "overige-keukenapparatuur": {
+    "id": 1086,
+    "name": "Overige keukenapparatuur"
+  },
+  "overige-randapparatuur": {
+    "id": 775,
+    "name": "Overige randapparatuur"
+  },
+  "overige-software": {
+    "id": 237,
+    "name": "Overige software"
+  },
+  "overige-zaagmachines": {
+    "id": 993,
+    "name": "Overige zaagmachines"
+  },
+  "pcs": {
+    "id": 713,
+    "name": "Pc's"
+  },
+  "persoonlijke-verzorging": {
+    "id": 927,
+    "name": "Persoonlijke verzorging"
+  },
+  "pizza-ovens": {
+    "id": 1064,
+    "name": "Pizza ovens"
+  },
+  "platenspelers": {
+    "id": 1046,
+    "name": "Platenspelers"
+  },
+  "power-stations": {
+    "id": 1050,
+    "name": "Power stations"
+  },
+  "powerbanks": {
+    "id": 997,
+    "name": "Powerbanks"
+  },
+  "powerline": {
+    "id": 791,
+    "name": "Powerline"
+  },
+  "prepaid-telefoons": {
+    "id": 816,
+    "name": "Prepaid telefoons"
+  },
+  "printer-cartridges": {
+    "id": 391,
+    "name": "Printer cartridges"
+  },
+  "printeraccessoires": {
+    "id": 323,
+    "name": "Printeraccessoires"
+  },
+  "printers": {
+    "id": 922,
+    "name": "Printers"
+  },
+  "printers-en-scanners": {
+    "id": 57,
+    "name": "Printers en scanners"
+  },
+  "processorkoeling": {
+    "id": 488,
+    "name": "Processorkoeling"
+  },
+  "processors": {
+    "id": 46,
+    "name": "Processors"
+  },
+  "programming": {
+    "id": 731,
+    "name": "Programming"
+  },
+  "randapparatuur": {
+    "id": 774,
+    "name": "Randapparatuur"
+  },
+  "reference": {
+    "id": 732,
+    "name": "Reference"
+  },
+  "rewritable-media": {
+    "id": 69,
+    "name": "(Re)Writable media"
+  },
+  "rijstkokers": {
+    "id": 1066,
+    "name": "Rijstkokers"
+  },
+  "robotstofzuigers": {
+    "id": 1018,
+    "name": "Robotstofzuigers"
+  },
+  "sapcentrifuges": {
+    "id": 1080,
+    "name": "Sapcentrifuges"
+  },
+  "scanners": {
+    "id": 58,
+    "name": "Scanners"
+  },
+  "schakelaars": {
+    "id": 936,
+    "name": "Schakelaars"
+  },
+  "scheerapparaten": {
+    "id": 792,
+    "name": "Scheerapparaten"
+  },
+  "schuurmachines": {
+    "id": 975,
+    "name": "Schuurmachines"
+  },
+  "sensors": {
+    "id": 935,
+    "name": "Sensors"
+  },
+  "servers": {
+    "id": 714,
+    "name": "Servers"
+  },
+  "serversoftware": {
+    "id": 841,
+    "name": "Serversoftware"
+  },
+  "singleboardcomputers": {
+    "id": 1004,
+    "name": "Singleboardcomputers"
+  },
+  "slowcookers": {
+    "id": 1044,
+    "name": "Slowcookers"
+  },
+  "smarthome-accessoires": {
+    "id": 944,
+    "name": "Smarthome-accessoires"
+  },
+  "smartphone-accessoires": {
+    "id": 377,
+    "name": "Smartphone-accessoires"
+  },
+  "smartphonehoesjes": {
+    "id": 957,
+    "name": "Smartphonehoesjes"
+  },
+  "smartphones": {
+    "id": 215,
+    "name": "Smartphones"
+  },
+  "smartwatches": {
+    "id": 930,
+    "name": "Smartwatches"
+  },
+  "software": {
+    "id": 211,
+    "name": "Software"
+  },
+  "software-boeken": {
+    "id": 735,
+    "name": "Software boeken"
+  },
+  "software-development": {
+    "id": 829,
+    "name": "Software development"
+  },
+  "software-en-netwerken": {
+    "id": 920,
+    "name": "Software en netwerken"
+  },
+  "soundbars": {
+    "id": 1008,
+    "name": "Soundbars"
+  },
+  "speakers": {
+    "id": 786,
+    "name": "Speakers"
+  },
+  "specialisaties": {
+    "id": 771,
+    "name": "Specialisaties"
+  },
+  "spiegelreflexcameras": {
+    "id": 288,
+    "name": "Spiegelreflexcamera's"
+  },
+  "statieven": {
+    "id": 951,
+    "name": "Statieven"
+  },
+  "stofzuigers": {
+    "id": 907,
+    "name": "Stofzuigers"
+  },
+  "stoomreinigers": {
+    "id": 1056,
+    "name": "Stoomreinigers"
+  },
+  "strijkijzers": {
+    "id": 928,
+    "name": "Strijkijzers"
+  },
+  "systeem-en-netwerkutilitys": {
+    "id": 410,
+    "name": "Systeem- en netwerkutility's"
+  },
+  "systeemcameras": {
+    "id": 931,
+    "name": "Systeemcamera's"
+  },
+  "tablet-accessoires": {
+    "id": 923,
+    "name": "Tablet-accessoires"
+  },
+  "tablets": {
+    "id": 822,
+    "name": "Tablets"
+  },
+  "tablets-en-e-readers": {
+    "id": 913,
+    "name": "Tablets en e-readers"
+  },
+  "tandenborstels": {
+    "id": 929,
+    "name": "Tandenborstels"
+  },
+  "tapijtreinigers": {
+    "id": 1076,
+    "name": "Tapijtreinigers"
+  },
+  "tekentablets": {
+    "id": 533,
+    "name": "Tekentablets"
+  },
+  "telefoonabonnementen": {
+    "id": 919,
+    "name": "Telefoonabonnementen"
+  },
+  "telefoons": {
+    "id": 921,
+    "name": "Telefoons"
+  },
+  "televisies": {
+    "id": 621,
+    "name": "Televisies"
+  },
+  "terrasverwarmers": {
+    "id": 1088,
+    "name": "Terrasverwarmers"
+  },
+  "thermometers": {
+    "id": 1054,
+    "name": "Thermometers"
+  },
+  "thermostaten": {
+    "id": 939,
+    "name": "Thermostaten"
+  },
+  "toetsenborden": {
+    "id": 530,
+    "name": "Toetsenborden"
+  },
+  "tosti-ijzers": {
+    "id": 1052,
+    "name": "Tosti-ijzers"
+  },
+  "upgradesets": {
+    "id": 568,
+    "name": "Upgradesets"
+  },
+  "ups-en-stekkerdozen": {
+    "id": 773,
+    "name": "Ups en stekkerdozen"
+  },
+  "usb-audio-en-video-hubs": {
+    "id": 307,
+    "name": "USB, audio en video-hubs"
+  },
+  "usb-opslag-controllers": {
+    "id": 60,
+    "name": "USB/Opslag-controllers"
+  },
+  "usb-sticks": {
+    "id": 306,
+    "name": "USB-sticks"
+  },
+  "vaatwassers": {
+    "id": 900,
+    "name": "Vaatwassers"
+  },
+  "vaste-telefonie": {
+    "id": 878,
+    "name": "Vaste telefonie"
+  },
+  "ventilators": {
+    "id": 1016,
+    "name": "Ventilators"
+  },
+  "verbruiksmeters": {
+    "id": 940,
+    "name": "Verbruiksmeters"
+  },
+  "verlichting": {
+    "id": 941,
+    "name": "Verlichting"
+  },
+  "versterkers-en-receivers": {
+    "id": 656,
+    "name": "Versterkers en receivers"
+  },
+  "videocameras": {
+    "id": 318,
+    "name": "Videocamera's"
+  },
+  "videokaarten": {
+    "id": 49,
+    "name": "Videokaarten"
+  },
+  "virtualisatie": {
+    "id": 864,
+    "name": "Virtualisatie"
+  },
+  "voedingen": {
+    "id": 664,
+    "name": "Voedingen"
+  },
+  "vr-brillen": {
+    "id": 955,
+    "name": "VR-brillen"
+  },
+  "vriezers": {
+    "id": 904,
+    "name": "Vriezers"
+  },
+  "wafelijzers": {
+    "id": 1082,
+    "name": "Wafelijzers"
+  },
+  "wasdrogers": {
+    "id": 899,
+    "name": "Wasdrogers"
+  },
+  "wasmachines": {
+    "id": 898,
+    "name": "Wasmachines"
+  },
+  "waterkoeling": {
+    "id": 491,
+    "name": "Waterkoeling"
+  },
+  "waterkoeling-accessoires": {
+    "id": 1006,
+    "name": "Waterkoeling accessoires"
+  },
+  "waterkokers": {
+    "id": 965,
+    "name": "Waterkokers"
+  },
+  "wearable-accessoires": {
+    "id": 1014,
+    "name": "Wearable-accessoires"
+  },
+  "webcams": {
+    "id": 289,
+    "name": "Webcams"
+  },
+  "weegschalen": {
+    "id": 1042,
+    "name": "Weegschalen"
+  },
+  "witgoed": {
+    "id": 914,
+    "name": "Witgoed"
+  }
+}

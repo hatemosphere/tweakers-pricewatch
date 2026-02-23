@@ -1,15 +1,21 @@
 """Tweakers.net Pricewatch helper library.
 
-Provides access to product search, current shop prices, and historical price data
-from Tweakers.net Pricewatch via reverse-engineered API endpoints.
+Provides access to product search, category browsing, current shop prices,
+and historical price data from Tweakers.net Pricewatch via reverse-engineered
+API endpoints.
 """
 
 from __future__ import annotations
 
+__version__ = "0.1.0"
+
 import json
+import math
 import re
+from collections.abc import Iterator
 from dataclasses import dataclass, field
 from html import unescape
+from pathlib import Path
 
 import requests
 
@@ -20,6 +26,8 @@ _UA = (
 )
 
 _BASE = "https://tweakers.net"
+_CATEGORIES_FILE = Path(__file__).resolve().parent / "categories.json"
+_ITEMS_PER_PAGE = 40
 
 
 # ---------------------------------------------------------------------------
@@ -75,6 +83,60 @@ class SearchResult:
     name: str
     url: str
     price: float | None = None
+
+
+@dataclass
+class BrowseItem:
+    product_id: int
+    name: str
+    url: str
+    price: float | None = None
+    shop_count: int = 0
+    image_url: str | None = None
+
+
+@dataclass
+class CategoryPage:
+    items: list[BrowseItem]
+    category_id: int
+    total_count: int
+    page: int
+    total_pages: int
+
+
+# ---------------------------------------------------------------------------
+# Category registry (loaded from categories.json)
+# ---------------------------------------------------------------------------
+
+_categories: dict[str, dict] | None = None
+
+
+def _load_categories() -> dict[str, dict]:
+    global _categories
+    if _categories is None:
+        _categories = json.loads(_CATEGORIES_FILE.read_text(encoding="utf-8"))
+    assert _categories is not None
+    return _categories
+
+
+def get_categories() -> dict[str, dict]:
+    """Return the full {slug: {id, name}} category map."""
+    return dict(_load_categories())
+
+
+def category_id(slug: str) -> int:
+    """Look up a category's numeric ID by slug.
+
+    >>> category_id("smartphones")
+    215
+    """
+    cats = _load_categories()
+    if slug not in cats:
+        raise ValueError(
+            f"Unknown category slug: {slug!r}. "
+            f"Run `python scripts/update_categories.py` to refresh."
+        )
+    return cats[slug]["id"]
 
 
 # ---------------------------------------------------------------------------
@@ -140,6 +202,92 @@ class TweakersClient:
                 ))
 
         return results
+
+    def search_one(self, query: str) -> SearchResult | None:
+        """Search and return the first result, or ``None`` if nothing found."""
+        results = self.search(query)
+        return results[0] if results else None
+
+    def browse_category(
+        self,
+        slug: str,
+        *,
+        page: int = 1,
+        sort: str = "prijs",
+        sort_dir: str = "asc",
+    ) -> CategoryPage:
+        """Browse a Pricewatch category with pagination and sorting.
+
+        *slug* is the category slug (e.g. ``"smartphones"``, ``"videokaarten"``).
+        See ``categories.json`` or ``CATEGORIES.md`` for the full list.
+
+        *sort* can be ``"prijs"`` (price), ``"popularity"`` or ``"score"``
+        (rating).
+        *sort_dir* can be ``"asc"`` or ``"desc"``.
+
+        Returns a :class:`CategoryPage` with ``.items``, ``.total_count``,
+        ``.page``, and ``.total_pages``.
+        """
+        cat_id = category_id(slug)
+        resp = self.session.get(
+            f"{_BASE}/{slug}/vergelijken/",
+            params={
+                "page": page,
+                "orderField": sort,
+                "orderSort": sort_dir,
+                "orderSpecId": -1,
+            },
+            timeout=15,
+            allow_redirects=True,
+        )
+        resp.raise_for_status()
+        html = resp.text
+
+        items = self._parse_browse_html(html)
+
+        # Extract total from "Resultaten X t/m Y van Z"
+        total = 0
+        total_m = re.search(
+            r"Resultaten\s+\d+\s+t/m\s+\d+\s+van\s+([\d.]+)", html,
+        )
+        if total_m:
+            total = int(total_m.group(1).replace(".", ""))
+
+        return CategoryPage(
+            items=items,
+            category_id=cat_id,
+            total_count=total,
+            page=page,
+            total_pages=math.ceil(total / _ITEMS_PER_PAGE) if total else 0,
+        )
+
+    def browse_all(
+        self,
+        slug: str,
+        *,
+        sort: str = "prijs",
+        sort_dir: str = "asc",
+        max_pages: int | None = None,
+    ) -> Iterator[BrowseItem]:
+        """Iterate over all products in a category, auto-paginating.
+
+        Yields :class:`BrowseItem` objects. Stops after *max_pages* pages
+        if set, otherwise fetches all pages.
+
+        >>> for item in client.browse_all("interne-ssds", max_pages=3):
+        ...     print(item.name, item.price)
+        """
+        page_num = 1
+        while True:
+            page = self.browse_category(
+                slug, page=page_num, sort=sort, sort_dir=sort_dir,
+            )
+            yield from page.items
+            if page_num >= page.total_pages:
+                break
+            if max_pages is not None and page_num >= max_pages:
+                break
+            page_num += 1
 
     def get_price_history(
         self, product_id: int, country: str = "nl",
@@ -225,6 +373,11 @@ class TweakersClient:
         offers = self._parse_shop_offers(html)
         return info, offers
 
+    def get_cheapest_offer(self, product_id: int) -> ShopOffer | None:
+        """Return the cheapest current shop offer, or ``None`` if unavailable."""
+        offers = self.get_current_prices(product_id)
+        return min(offers, key=lambda o: o.price) if offers else None
+
     @staticmethod
     def product_id_from_url(url: str) -> int:
         """Extract product ID from a Tweakers Pricewatch URL.
@@ -240,6 +393,59 @@ class TweakersClient:
         return int(m.group(1))
 
     # -- private helpers ----------------------------------------------------
+
+    @staticmethod
+    def _parse_browse_html(html: str) -> list[BrowseItem]:
+        """Parse product listing from category page HTML."""
+        items: list[BrowseItem] = []
+
+        # Extract the <ul class="item-listing">...</ul> block
+        listing_m = re.search(
+            r'<ul\s+class="item-listing">(.*?)</ul>', html, re.DOTALL,
+        )
+        if not listing_m:
+            return items
+
+        # Split into individual <li>...</li> items
+        for li_m in re.finditer(r"<li[^>]*>(.*?)</li>", listing_m.group(1), re.DOTALL):
+            block = li_m.group(1)
+
+            # Structured data from the compare button (id, name, url, img)
+            pd_m = re.search(r'data-productdata="([^"]*)"', block)
+            if not pd_m:
+                continue
+            try:
+                pd = json.loads(unescape(pd_m.group(1)))
+            except (json.JSONDecodeError, ValueError):
+                continue
+
+            pid = pd.get("id")
+            if not pid:
+                continue
+
+            # Price from <span class="amount">€ 27,40</span>
+            # (may contain a <twk-icon> before the € sign for refurbished items)
+            price = None
+            price_m = re.search(r'class="amount"[^>]*>.*?€\s*([\d.,]+(?:-)?)', block, re.DOTALL)
+            if price_m:
+                price = _parse_dutch_price(price_m.group(1))
+
+            # Shop count from "bij N winkel(s)"
+            shop_count = 0
+            shops_m = re.search(r"bij\s+(\d+)\s+winkel", block)
+            if shops_m:
+                shop_count = int(shops_m.group(1))
+
+            items.append(BrowseItem(
+                product_id=int(pid),
+                name=pd.get("name", ""),
+                url=pd.get("url", ""),
+                price=price,
+                shop_count=shop_count,
+                image_url=pd.get("img"),
+            ))
+
+        return items
 
     def _init_consent_cookies(self) -> None:
         """Follow the DPG Media consent redirect to obtain session cookies."""
