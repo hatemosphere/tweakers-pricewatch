@@ -31,8 +31,8 @@ _BASE = "https://tweakers.net"
 _SITEMAP_URL = f"{_BASE}/categories/sitemap.xml"
 _SITEMAP_NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 
-_MAX_WORKERS = 6
-_REQUEST_DELAY = 0.3  # seconds between requests per thread
+_MAX_WORKERS = 1
+_REQUEST_DELAY = 1  # seconds between requests per thread
 _MAX_RETRIES = 10
 _RETRY_BACKOFF = 5  # seconds, doubled each retry (5, 10, 20, 40, ...)
 
