@@ -64,6 +64,8 @@ for item in client.browse_all("videokaarten", max_pages=3):
 
 Sort by `"prijs"` (price), `"popularity"`, or `"score"` (rating). See [CATEGORIES.md](CATEGORIES.md) for all 243 available category slugs.
 
+> **Note:** Default sort is `prijs` ascending - cheapest first. If you're looking for a specific high-value SKU (e.g. an RTX 5090 in `videokaarten`, which has 900+ entries), set `sort="popularity"` and `sort_dir="desc"` so the SKU shows up on the first page. Otherwise you may need to paginate deep into the long tail before the product appears, or use `search()` for exact lookups.
+
 ### Look up categories
 
 ```python
